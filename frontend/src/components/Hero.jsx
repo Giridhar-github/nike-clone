@@ -13,7 +13,6 @@ import mensImage from '../assets/mens.jpg'
 import womensImage from '../assets/womens.jpg'
 import kidsImage from '../assets/kids.jpg'
 import ThreeGrid from "./ThreeGrid"
-import Footer from "./Footer"
 
 const Hero = () => {
     const trending1 = {
@@ -117,22 +116,21 @@ const Hero = () => {
             <div className="hidden md:mb-40 md:flex md:gap-x-16 md:justify-center md:h-48 md:overflow-hidden hover:overflow-visible md:transition md:ease-in-out hover:translate-y-0 hover:delay-300">
                 <div className="flex flex-col gap-y-3">
                     <p className="font-bold mb-5">Icons</p>
-                    {icons.map((item) => <Link>{item}</Link>)}
+                    {icons.map((item) => <Link key={} to={''}>{item}</Link>)}
                 </div>
                 <div className="flex flex-col gap-y-3">
                 <p className="font-bold mb-5">Shoes</p>
-                    {shoes.map(shoe => <Link>{shoe}</Link>)}
+                    {shoes.map(shoe => <Link key={} to={''}>{shoe}</Link>)}
                 </div>
                 <div className="flex flex-col gap-y-3">
                 <p className="font-bold mb-5">Clothing</p>
-                    {clothing.map(cloth => <Link>{cloth}</Link>)}
+                    {clothing.map(cloth => <Link key={} to={''}>{cloth}</Link>)}
                     </div>
                 <div className="flex flex-col gap-y-3">
                 <p className="font-bold mb-5">Kids'</p>
-                    {kids.map(kid=><Link>{kid}</Link>)}
+                    {kids.map(kid=><Link key={} to={''}>{kid}</Link>)}
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
